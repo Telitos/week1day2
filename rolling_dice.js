@@ -24,31 +24,24 @@
 
 */
 
-// var num_rolls = process.argv[2]
 
-// function RandomNumber (min, max) {
-//   min = Math.ceil(min);
-//   max = Math.floor(max);
-//   return Math.floor(Math.random() * (max - min + 1)) + 1;
-// }
+function RandomNumber (min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + 1;
+}
 
-// console.log(RandomNumber(1,6))
+//console.log(RandomNumber(1,6))
 
-// function Rolldice (num){
-//   var random_numbers = []
-//   for (var i = 0; i < num; i ++){
-//     random_numbers[i] = RandomNumber(1,6)
-//   }
-//   return random_numbers
-// }
+function Rolldice (num){
+  var random_numbers = []
+  for (var i = 0; i < num; i ++){
+    random_numbers[i] = RandomNumber(1,6)
+  }
+  return random_numbers
+}
 
-// console.log(Rolldice(3))
-
-// function Print_result(){
-//   var final_sentence = ""
-//   var part1 : "Rolled: "
-//   var part2 : " dice: "
-//   var part3 : concatenate()
+//console.log(Rolldice(3))
 
 function turn_array_to_string(numbers) {
   var rolls = ""
@@ -60,6 +53,12 @@ function turn_array_to_string(numbers) {
     rolls += (numbers[i])
   }
   return rolls
-  console.log(rolls)
   }
-console.log(turn_array_to_string([1,2,3]))
+
+  var num_rolls = process.argv[2]
+  var part1 = "Rolled: "
+  var part2 = " dice: "
+  var part3 = turn_array_to_string(Rolldice(num_rolls))
+  var final_sentence = part1 + num_rolls + part2 + part3
+
+console.log(final_sentence);
