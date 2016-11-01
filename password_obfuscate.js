@@ -7,22 +7,25 @@
 // and so on for each cases
 //else concatenate the string index as is.
 
+
+var inputpassword = process.argv[2]
+
 function obfuscate (password) {
   var password_obfuscated = ""
   for (var i = 0; i < password.length; i ++) {
     if (password[i] == "a") {
-      password_obfuscated = password_obfuscated + "4"
+      password_obfuscated += "4"
     } else if (password[i] == "e") {
-      password_obfuscated = password_obfuscated + "3"
+      password_obfuscated += "3"
     } else if (password[i] == "o") {
-      password_obfuscated = password_obfuscated + "0"
+      password_obfuscated += "0"
     } else if (password[i] == "l") {
-      password_obfuscated = password_obfuscated + "1"
+      password_obfuscated += "1"
     } else {
-      password_obfuscated = password_obfuscated + password[i]
+      password_obfuscated += password[i]
     }
   }
   return password_obfuscated
 }
 
-//console.log(obfuscate(passwordo))
+console.log(obfuscate(inputpassword))
