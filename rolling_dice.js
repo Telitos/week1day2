@@ -33,9 +33,9 @@ function RandomNumber (min, max) {
 
 //console.log(RandomNumber(1,6))
 
-function Rolldice (num){
+function Rolldice (num) {
   var random_numbers = []
-  for (var i = 0; i < num; i ++){
+  for (var i = 0; i < num; i ++) {
     random_numbers[i] = RandomNumber(1,6)
   }
   return random_numbers
@@ -56,7 +56,7 @@ function turn_array_to_string(numbers) {
   }
 
   var num_rolls = process.argv[2]
-  var part1 = "Rolled: "
+  var part1 = "Rolled "
   var part2 = " dice: "
   var part3 = turn_array_to_string(Rolldice(num_rolls))
   var final_sentence = part1 + num_rolls + part2 + part3
