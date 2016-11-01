@@ -24,7 +24,7 @@
 
 */
 
-//var num_rolls = process.argv[2]
+var num_rolls = process.argv[2]
 
 function RandomNumber (min, max) {
   min = Math.ceil(min);
@@ -33,3 +33,16 @@ function RandomNumber (min, max) {
 }
 
 console.log(RandomNumber(1,6))
+
+function Rolldice (num){
+  var random_numbers = []
+  for (var i = 0; i < num; i ++){
+    random_numbers[i] = RandomNumber(1,6)
+  }
+  return random_numbers
+}
+
+function
+
+
+console.log(Rolldice(3))
