@@ -55,10 +55,10 @@ function turn_array_to_string(numbers) {
   return rolls
   }
 
-  var num_rolls = process.argv[2]
-  var part1 = "Rolled "
-  var part2 = " dice: "
-  var part3 = turn_array_to_string(Rolldice(num_rolls))
-  var final_sentence = part1 + num_rolls + part2 + part3
+  var num_rolls = process.argv[2];
+  var part1 = "Rolled ";
+  var part2 = " dice: ";
+  var part3 = turn_array_to_string(Rolldice(num_rolls));
+  var final_sentence = part1 + num_rolls + part2 + part3;
 
 console.log(final_sentence);
